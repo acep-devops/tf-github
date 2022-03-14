@@ -7,7 +7,7 @@ resource "github_membership" "developers" {
 resource "github_team_membership" "developers" {
   for_each = toset(compact(distinct(concat(var.developers, var.admins))))
   username = each.key
-  team_id = github_team.developers.id
+  team_id  = github_team.developers.id
 }
 
 resource "github_membership" "admins" {
@@ -19,7 +19,7 @@ resource "github_membership" "admins" {
 resource "github_team_membership" "admins" {
   for_each = toset(var.admins)
   username = each.key
-  team_id = github_team.admins.id
+  team_id  = github_team.admins.id
 }
 
 resource "github_team_membership" "bots" {
