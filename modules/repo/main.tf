@@ -20,7 +20,7 @@ resource "github_repository" "repo" {
 
 resource "github_branch_protection" "default" {
   repository_id = github_repository.repo.node_id
-  pattern       = github_branch.default.branch
+  pattern       = "main"
 
   depends_on = [
     github_repository.repo,
