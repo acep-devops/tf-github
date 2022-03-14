@@ -18,16 +18,6 @@ resource "github_repository" "repo" {
   vulnerability_alerts   = true
 }
 
-resource "github_branch" "default" {
-  repository = github_repository.repo.name
-  branch     = "main"
-}
-
-resource "github_branch_default" "default" {
-  repository = github_repository.repo.name
-  branch     = github_branch.default.branch
-}
-
 resource "github_branch_protection" "default" {
   repository_id = github_repository.repo.node_id
   pattern       = github_branch.default.branch
