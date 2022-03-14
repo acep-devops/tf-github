@@ -1,2 +1,3 @@
 *.lock.hcl
 .terraform/
+service-account.json
