@@ -12,3 +12,13 @@ variable "bots" {
   type        = list(string)
   description = "A list of bots"
 }
+
+variable "repository" {
+  type = list(object({
+    name               = string
+    description        = string
+    visibility         = string
+    license            = string
+    gitignore_template = string
+  }))
+}
