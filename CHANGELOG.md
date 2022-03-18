@@ -4,6 +4,7 @@ This file is used to list changes made in github org ACEP-Devops
 
 ## 2022-03-18
 
+Added new wiki repository
 Added tf-github to managed repo list
 Added direcitions to README.md
 Rename `repo.tf` to `org-repos.tf` to follow naming scheme
