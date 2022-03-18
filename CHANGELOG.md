@@ -10,6 +10,6 @@ Rename `repo.tf` to `org-repos.tf` to follow naming scheme
 
 ## 2022-03-14
 
-Created organization teams and the ability to join teams.   
-Github actions in place to commit changes to the repo.   
+Created organization teams and the ability to join teams.
+Github actions in place to commit changes to the repo.
 Add remote backend to acep gcp.
