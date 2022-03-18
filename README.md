@@ -33,7 +33,7 @@ Following these guidelines:
 
 1. Create a new branch
 2. Edit the `org-teams.tf` file to include a new resource block following the format below
-    
+
     ```
     resource "github_team" "new_team" {
     name        = "new_team"
@@ -43,7 +43,7 @@ Following these guidelines:
     ```
 
 3. Edit the `org-membership.tf` file to include two new resource blocks outlined below:
-    
+
     ```
     resource "github_membership" "new_team" {
     for_each = toset(var.new_team)
@@ -57,7 +57,7 @@ Following these guidelines:
     team_id  = github_team.new_team.id
     }
     ```
-    
+
 4. Edit the `terraform.tfvars.json` file to include a new key for your team with the value a list of users to be added
 5. Add changes to `CHANGELOG.md`
 6. Open a PR with a short description of what the changes are
