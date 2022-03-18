@@ -66,7 +66,7 @@ resource "github_team_membership" "new_team" {
 The Organization manages the repositories using our Terraform Module. If adding a new repository a new repository object can be added under the `repository` key in the `terraform.tfvars.json` file. The current configurable and required settings on the repostiory object are:
 
 | Setting | Type | Default |
-----------------------------
+| --------- | --------- | --------- |
 | name | string | nil |
 | description | string | "" |
 | visibility | string | "private" | 
