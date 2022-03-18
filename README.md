@@ -1,4 +1,5 @@
 # tf-github
+
 This repo manages the ACEP DevOps Organization
 
 ## Org Memebership & Teams
@@ -11,7 +12,7 @@ The current design of the Organization is that there are
 - bots
 
 Upon adding a user to the `terraform.tfvars.json` file under the correct team,
- an invite will automatically be sent for the user and they will be added to 
+ an invite will automatically be sent for the user and they will be added to
  the corrisponding team.
 
 ### Adding a new user(s)
@@ -32,27 +33,31 @@ Following these guidelines:
 
 1. Create a new branch
 2. Edit the `org-teams.tf` file to include a new resource block following the format below
-```
-resource "github_team" "new_team" {
-  name        = "new_team"
-  description = "Short description of team"
-  privacy     = "closed"
-}
-```
-3. Edit the `org-membership.tf` file to include two new resource blocks outlined below:
-```
-resource "github_membership" "new_team" {
-  for_each = toset(var.new_team)
-  username = each.key
-  role     = "member"
-}
+    
+    ```
+    resource "github_team" "new_team" {
+    name        = "new_team"
+    description = "Short description of team"
+    privacy     = "closed"
+    }
+    ```
 
-resource "github_team_membership" "new_team" {
-  for_each = toset(compact(distinct(concat(var.new_team, var.admins))))
-  username = each.key
-  team_id  = github_team.new_team.id
-}
-```
+3. Edit the `org-membership.tf` file to include two new resource blocks outlined below:
+    
+    ```
+    resource "github_membership" "new_team" {
+    for_each = toset(var.new_team)
+    username = each.key
+    role     = "member"
+    }
+
+    resource "github_team_membership" "new_team" {
+    for_each = toset(compact(distinct(concat(var.new_team, var.admins))))
+    username = each.key
+    team_id  = github_team.new_team.id
+    }
+    ```
+    
 4. Edit the `terraform.tfvars.json` file to include a new key for your team with the value a list of users to be added
 5. Add changes to `CHANGELOG.md`
 6. Open a PR with a short description of what the changes are
@@ -63,7 +68,7 @@ resource "github_team_membership" "new_team" {
 
 The Organization manages the repositories using our Terraform Module. If adding a new
 repository a new repository object can be added under the `repository` key in the
- `terraform.tfvars.json` file. The current configurable and required 
+ `terraform.tfvars.json` file. The current configurable and required
  settings on the repostiory object are:
 
 | Setting | Type | Default |
@@ -71,7 +76,7 @@ repository a new repository object can be added under the `repository` key in th
 | name | string | nil |
 | description | string | "" |
 | visibility | string | "private" |
-| license | string | "mit" | 
+| license | string | "mit" |
 | gitignore_template | string | "Python" |
 
 The full list of configurable settings are available in the module and new variables can be added on request.
