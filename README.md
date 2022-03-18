@@ -3,18 +3,21 @@ This repo manages the ACEP DevOps Organization
 
 ## Org Memebership & Teams
 
-The current design of the Organization is that there are three teams, that dictate membership to the Organization.
+The current design of the Organization is that there are
+ three teams, that dictate membership to the Organization.
 
 - admins
 - developers
 - bots
 
-Upon adding a user to the `terraform.tfvars.json` file under the correct team, an invite will automatically be sent for the user and they will be added to the corrisponding team.
+Upon adding a user to the `terraform.tfvars.json` file under the correct team, an invite will automatically
+ be sent for the user and they will be added to the corrisponding team.
 
 ### Adding a new user(s)
 
 Adding new user(s) to the organization should be done following these steps:
 
+:ordered
 1. Create a new branch
 2. Edit the `terraform.tfvars.json` file to include user(s) to existing teams
 3. Add changes to `CHANGELOG.md`
@@ -22,10 +25,9 @@ Adding new user(s) to the organization should be done following these steps:
 5. Pass GitHub Actions
 6. Merged by Admin
 
-
 ### Adding new teams
 
-If a new team is needed they can be added to the `org-teams.tf` file  
+If a new team is needed they can be added to the `org-teams.tf` file
 Following these guidelines:
 1. Create a new branch
 2. Edit the `org-teams.tf` file to include a new resource block following the format below    
@@ -60,7 +62,6 @@ resource "github_team_membership" "new_team" {
 7. Pass GitHub Actions
 8. Merged by Admin
 
-
 ## Org Repos
 
 The Organization manages the repositories using our Terraform Module. If adding a new repository a new repository object can be added under the `repository` key in the `terraform.tfvars.json` file. The current configurable and required settings on the repostiory object are:
@@ -76,7 +77,6 @@ The Organization manages the repositories using our Terraform Module. If adding 
 The full list of configurable settings are available in the module and new variables can be added on request.
 
 By default all repos have branch protection enabled and require reviews.  
-
 
 ### Adding a new repository
 
