@@ -2,6 +2,14 @@
 
 This file is used to list changes made in github org ACEP-Devops
 
+## 2022-04-07
+
+Added new repo for telegraf cookbook
+
+## 2022-04-05
+
+Add new org memeber: Millard
+
 ## 2022-03-18
 
 Added new wiki repository
