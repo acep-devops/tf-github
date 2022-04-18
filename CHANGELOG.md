@@ -2,6 +2,10 @@
 
 This file is used to list changes made in github org ACEP-Devops
 
+## 2022-04-18
+
+Move the dns repo to private.
+
 ## 2022-04-07
 
 Added new repo for telegraf cookbook
