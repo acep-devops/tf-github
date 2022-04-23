@@ -2,6 +2,10 @@
 
 This file is used to list changes made in github org ACEP-Devops
 
+## 2022-04-22
+
+Add new org member: TechSolomon
+
 ## 2022-04-18
 
 Move the dns repo to private.
@@ -12,7 +16,7 @@ Added new repo for telegraf cookbook
 
 ## 2022-04-05
 
-Add new org memeber: Millard
+Add new org member: imthegngrbrdmn
 
 ## 2022-03-18
 
