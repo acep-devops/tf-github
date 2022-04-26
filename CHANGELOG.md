@@ -2,6 +2,10 @@
 
 This file is used to list changes made in github org ACEP-Devops
 
+## 2022-04-26
+
+Add new repo: ermda-timescale-sqlalc
+
 ## 2022-04-22
 
 Add new org member: TechSolomon
