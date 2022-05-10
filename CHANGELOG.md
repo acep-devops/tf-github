@@ -2,6 +2,10 @@
 
 This file is used to list changes made in github org ACEP-Devops
 
+## 2022-05-10
+
+Add new repo: coastsat-tf
+
 ## 2022-04-26
 
 Add new repo: ermda-timescale-sqlalc
