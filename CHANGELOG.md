@@ -4,7 +4,7 @@ This file is used to list changes made in github org ACEP-Devops
 
 ## 2022-06-10
 
-Add new repo: `apache-airflow-tf`
+Add new repo: tf-apache-airflow
 
 ## 2022-05-10
 
