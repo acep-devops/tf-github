@@ -5,6 +5,8 @@ This file is used to list changes made in github org ACEP-Devops
 ## 2022-06-10
 
 Add new repo: tf-apache-airflow
+Change user to admin: dgpalmieri
+Remove user: imthegngrbrdmn
 
 ## 2022-05-10
 
