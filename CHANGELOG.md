@@ -2,6 +2,10 @@
 
 This file is used to list changes made in github org ACEP-Devops
 
+## 2022-06-20
+
+Add new user: fkpalmieri
+
 ## 2022-06-10
 
 Add new repo: tf-apache-airflow
