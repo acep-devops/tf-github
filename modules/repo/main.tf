@@ -8,7 +8,7 @@ resource "github_repository" "repo" {
   allow_merge_commit     = false
   allow_squash_merge     = true
   allow_rebase_merge     = false
-  delete_branch_on_merge = false
+  delete_branch_on_merge = true
   has_downloads          = false
   archived               = false
   auto_init              = true
@@ -20,7 +20,9 @@ resource "github_repository" "repo" {
 
 resource "github_branch_protection" "default" {
   repository_id = github_repository.repo.node_id
-  pattern       = "main"
+
+  pattern          = [main, dev]
+  allows_deletions = false
 
   depends_on = [
     github_repository.repo,
