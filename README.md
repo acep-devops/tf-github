@@ -1,6 +1,6 @@
 # tf-github
 
-This repo manages the ACEP DevOps Organization
+This repo manages the ACEP DevOps Organization using [terraform](terraform.io)'s [github provider integration]https://registry.terraform.io/providers/integrations/github/latest/docs)
 
 ## Org Memebership & Teams
 
@@ -106,4 +106,4 @@ If you would like to add a user to the Org, add a user to a team,
 5. Pass GitHub Actions
 6. Merged by Admin
 
-If a change is not merged timely please reach out to Dayne@alaska.edu
+If a change is not merged timely please reach out to [@dayne](https://github.com/dayne) Dayne@alaska.edu
