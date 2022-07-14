@@ -2,6 +2,10 @@
 
 This file is used to list changes made in github org ACEP-Devops
 
+## 2022-07-14
+
+Rename repository to `dipdag` & maintain temporary branch protection.
+
 ## 2022-07-01
 
 Add new repo: tf-grafana-as-code
