@@ -88,11 +88,10 @@ variables can be added on request.
 
 By default all repos have branch protection enabled and require reviews.
 
-It should be noted that all repositories should be created using this repository
-- as of c22aab1, based on the default variables that are enabled, adding an
-existing repository to the Terraform causes the `Apply` step of the pipeline
-to crash, as it cannot create an existing repo (see
-[this Actions run](https://github.com/acep-devops/tf-github/runs/7350539751?check_suite_focus=true)).
+It should be noted that all repositories should be created using this
+repository. As of c22aab1, based on the default variables that are enabled,
+adding an existing repository to the Terraform causes the `Apply` step of the
+pipeline to crash, as it cannot create an existing repo.
 
 ### Adding a new repository
 
