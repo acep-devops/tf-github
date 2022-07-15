@@ -7,6 +7,7 @@ This file is used to list changes made in github org ACEP-Devops
 Rename repository from to tf-apache-airflow to dip-dag
 Add `dev` to protected branches w/ restricting deletions
 Terraform existing repo (test): ado-dylan
+Remove entry for existing repo: ado-dylan (test failed)
 
 ## 2022-07-01
 
