@@ -1,6 +1,7 @@
 # tf-github
 
-This repo manages the ACEP DevOps Organization using [terraform](terraform.io)'s [github provider integration]https://registry.terraform.io/providers/integrations/github/latest/docs)
+This repo manages the ACEP DevOps Organization using [terraform](terraform.io)'s
+[github provider integration](https://registry.terraform.io/providers/integrations/github/latest/docs)
 
 ## Org Memebership & Teams
 
