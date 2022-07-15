@@ -20,9 +20,7 @@ resource "github_repository" "repo" {
 
 resource "github_branch_protection" "default" {
   repository_id = github_repository.repo.node_id
-
-  pattern          = [main, dev]
-  allows_deletions = false
+  pattern       = "main"
 
   depends_on = [
     github_repository.repo,
@@ -33,6 +31,21 @@ resource "github_branch_protection" "default" {
     require_code_owner_reviews = false
   }
 
+}
+
+resource "github_branch_protection" "development" {
+  repository_id    = github_repository.repo.node_id
+  pattern          = "dev"
+  allows_deletions = false
+
+  depends_on = [
+    github_repository.repo
+  ]
+
+  required_pull_request_reviews {
+    dismiss_stale_reviews      = true
+    require_code_owner_reviews = false
+  }
 }
 
 resource "github_team_repository" "developers_access" {
