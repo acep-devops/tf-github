@@ -33,9 +33,10 @@ If a new team is needed they can be added to the `org-teams.tf` file
 Following these guidelines:
 
 1. Create a new branch
-2. Edit the `org-teams.tf` file to include a new resource block following the format below
+2. Edit the `org-teams.tf` file to include a new resource block following the
+   format below
 
-    ```
+    ```terraform
     resource "github_team" "new_team" {
     name        = "new_team"
     description = "Short description of team"
@@ -43,9 +44,10 @@ Following these guidelines:
     }
     ```
 
-3. Edit the `org-membership.tf` file to include two new resource blocks outlined below:
+3. Edit the `org-membership.tf` file to include two new resource blocks outlined
+   below:
 
-    ```
+    ```terraform
     resource "github_membership" "new_team" {
     for_each = toset(var.new_team)
     username = each.key
@@ -59,7 +61,8 @@ Following these guidelines:
     }
     ```
 
-4. Edit the `terraform.tfvars.json` file to include a new key for your team with the value a list of users to be added
+4. Edit the `terraform.tfvars.json` file to include a new key for your team with
+   the value a list of users to be added
 5. Add changes to `CHANGELOG.md`
 6. Open a PR with a short description of what the changes are
 7. Pass GitHub Actions
@@ -67,9 +70,9 @@ Following these guidelines:
 
 ## Org Repos
 
-The Organization manages the repositories using our Terraform Module. If adding a new
-repository a new repository object can be added under the `repository` key in the
- `terraform.tfvars.json` file. The current configurable and required
+The Organization manages the repositories using our Terraform Module. If adding
+a new repository a new repository object can be added under the `repository` key
+in the `terraform.tfvars.json` file. The current configurable and required
  settings on the repostiory object are:
 
 | Setting | Type | Default |
@@ -80,7 +83,8 @@ repository a new repository object can be added under the `repository` key in th
 | license | string | "mit" |
 | gitignore_template | string | "Python" |
 
-The full list of configurable settings are available in the module and new variables can be added on request.
+The full list of configurable settings are available in the module and new
+variables can be added on request.
 
 By default all repos have branch protection enabled and require reviews.
 
@@ -107,4 +111,5 @@ If you would like to add a user to the Org, add a user to a team,
 5. Pass GitHub Actions
 6. Merged by Admin
 
-If a change is not merged timely please reach out to [@dayne](https://github.com/dayne) Dayne@alaska.edu
+If a change is not merged in a timely manner please reach out to
+[@dayne](https://github.com/dayne)(dayne@alaska.edu)
