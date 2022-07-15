@@ -4,6 +4,8 @@ This file is used to list changes made in github org ACEP-Devops
 
 ## 2022-07-14
 
+Rename repository from to tf-apache-airflow to dip-dag
+Add `dev` to protected branches w/ restricting deletions
 Terraform existing repo (test): ado-dylan
 
 ## 2022-07-01
